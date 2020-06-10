@@ -32,9 +32,17 @@ Open using Git Pages:
 
 ## Specs
 
-| |
-------|------|------
-| |
+Behavior|Input|Output
+--------|-------|-------
+The program does nothing to non-alphabetical characters, since they don't contain consonants or vowels|#|#
+The program adds "way" to single-letter words beginning with a vowel|a|away
+The program adds "way" to multi-letter words beginning with a vowel|in|inway
+The program will capitalize the first letter of each word|out|Outway
+The program moves single consonants to the back of a single word and adds "ay"|good|oodgay
+The program moves two consonant to the back of a single word and adds "ay"|program|ogrampray
+The program moves three consonants to the back of a single word and adds "ay"|strong|ongstray
+The program moves u with any other consonants if preceded by a q and adds "ay"|quell|ellquay
+The program will add "way" to any words that begin with a vowel, or move consonants to the back of any words and add "ay"|pig latin is tedious|igpay atinlay isway edioustay
 
 ## Known Bugs
 
