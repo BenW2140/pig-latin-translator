@@ -1,9 +1,14 @@
 const translator = function (language, vowels) {
-  vowels.forEach(function(vowel) {
-    if(language.slice(0, 1) === vowel) {
+  let letters = language.slice(0, 1);
+  for (let i = 0; i < vowels.length; i++) {
+    if(letters !== vowels[i]) {
+      language = language.slice(1);
+      language = language.concat(letters + "ay");
+      break;
+    } else {
       language = language.concat("way");
     }
-  })
+  }
   return language;
 }
 

@@ -37,7 +37,6 @@ Behavior|Input|Output
 The program does nothing to non-alphabetical characters, since they don't contain consonants or vowels|#|#
 The program adds "way" to single-letter words beginning with a vowel|a|away
 The program adds "way" to multi-letter words beginning with a vowel|in|inway
-The program will capitalize the first letter of each word|out|Outway
 The program moves single consonants to the back of a single word and adds "ay"|good|oodgay
 The program moves two consonant to the back of a single word and adds "ay"|program|ogrampray
 The program moves three consonants to the back of a single word and adds "ay"|strong|ongstray
