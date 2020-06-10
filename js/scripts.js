@@ -1,15 +1,17 @@
 const translator = function (language, vowels) {
-  let letters = language.slice(0, 1);
-  for (let i = 0; i < vowels.length; i++) {
-    if(letters !== vowels[i]) {
-      language = language.slice(1);
-      language = language.concat(letters + "ay");
-      break;
-    } else {
-      language = language.concat("way");
+  for (let i = 1; i <= language.length; i++) {
+    const letters = language.slice(0, i);
+    for (let j = 0; j < vowels.length; j++) {
+      if(letters !== vowels[j] && j === vowels.length - 1) {
+        language = language.slice(i);
+        language = language.concat(letters + "ay");
+        return language;
+      } else if (letters === vowels[j]) {
+        language = language.concat("way");
+        return language;
+      }
     }
   }
-  return language;
 }
 
 $(document).ready(function() {
